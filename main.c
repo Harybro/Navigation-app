@@ -2,5 +2,8 @@
 #include "header.h"
 
 int main() {
-    menu();
+    int choice = menu();
+    printf("choice: %d", choice);
+
+    
 }

@@ -47,7 +47,5 @@ int menu() {
 
     }
 
-    printf("%d", menu);
-
     return menu;
 }
