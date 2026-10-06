@@ -3,5 +3,5 @@
 
 //functions
 int menu();
-
+int dijkstra()
 #endif

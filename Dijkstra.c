@@ -1,7 +1,8 @@
 #include <stdio.h>
 #include <limits.h>
+#include <n = 5>
 
-int main() {
+int navigate(int start, int end) 
     int graph[5][5] = { //adjacency matrtrix used for small dijkstras algorithm for scaled up will use adjaceny list
         {0, 4, 2, 0, 0},
         {4, 0, 0, 1, 0},
@@ -20,8 +21,8 @@ int main() {
         previous[i] = -1; //set to -1 because previous node is unkown
     }
 
-    distance[2] = 0; //distance set to A(0) letters arent used just numbers 
-    int destination = 4;
+    distance[start] = 0; //distance set to A(0) letters arent used just numbers 
+    int destination = end;
 
     for (int count = 0; count < 5; count++) {
 
@@ -50,9 +51,10 @@ int main() {
         }
     }
 
-    int current = destination;
+    int current = destination; 
 
-    while (current != -1) {
+    //displays the shortest path from start to destination
+    while (current != -1) { 
         printf("%c ", 'A' + current);
         current = previous[current];
     }
